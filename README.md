@@ -7,7 +7,7 @@ Using the library GSAP I also added some animation on scroll.
 
 
 ### Built with
--HTML
--CSS
--JS
--GSAP
+- HTML
+- CSS
+- JS
+- GSAP
