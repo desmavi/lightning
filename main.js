@@ -118,7 +118,7 @@ const section = document.querySelectorAll("section");
             trigger: element.parentNode, 
             start: element.parentNode.offsetLeft,
             ease: "power1.inOut",
-            scrub:true
+            scrub:1
         },
             opacity: 0
         });
