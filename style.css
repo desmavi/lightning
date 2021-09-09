@@ -175,6 +175,10 @@ h1 {
     text-underline-offset: 1rem;
     transition: text-decoration 1s ease-in-out;
 }
+.credits p {
+    position: absolute;
+    bottom: 5%;
+}
 
 @media (max-width: 768px) {
     .wrap {
