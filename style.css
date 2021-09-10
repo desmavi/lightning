@@ -153,13 +153,13 @@ h1 {
 .credits {
     position: relative;
     z-index: 5;
+    font-family: 'Italiana', serif;
+
 }
 
 .credits a {
     font-size: 4rem;
     color: white;
-    font-family: 'Italiana', serif;
-
     
     text-decoration: underline;
     text-decoration-style: wavy;
