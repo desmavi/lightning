@@ -14,6 +14,11 @@ body {
     overflow-y: scroll;
 }
 
+body p {
+        font-family: 'Montserrat', sans-serif;
+
+}
+
 button {
     border: none;
     background-color: transparent;
@@ -76,9 +81,6 @@ nav a:hover {
     right: 0;
 }
 
-.slide .line::after {
-        transform: translateX(100%);
-}
 
 /*SECTIONS WRAP*/
 .wrap {
@@ -105,8 +107,6 @@ section {
     width: 600px;
     height: auto;
     position: relative;
-
-
 }
 
 .img-container img {
@@ -117,7 +117,7 @@ section {
 section p {
     position: absolute;
     z-index: 3;
-    bottom: 15%;
+    bottom: 10%;
 }
 
 /*INTRO & CREDITS SECTIONS*/
@@ -158,6 +158,8 @@ h1 {
 .credits a {
     font-size: 4rem;
     color: white;
+    font-family: 'Italiana', serif;
+
     
     text-decoration: underline;
     text-decoration-style: wavy;
@@ -175,6 +177,7 @@ h1 {
     text-underline-offset: 1rem;
     transition: text-decoration 1s ease-in-out;
 }
+
 .credits p {
     position: absolute;
     bottom: 5%;
@@ -201,6 +204,10 @@ h1 {
     nav a {
         font-size: 3rem;
     }
+    
+    p {
+        font-size: 1.2rem;
+    }
 
     section p {
     position: static;
@@ -208,3 +215,12 @@ h1 {
 
     }
 } 
+
+@media (prefers-reduced-motion: no-preference) {
+    
+    .slide .line::after {
+        transform: translateX(100%);
+    }
+
+}
+
