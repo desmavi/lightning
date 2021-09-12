@@ -128,10 +128,8 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity =  "1";
-            console.log("in view")   
         } else {
             entry.target.style.opacity =  "0";
-            console.log("not in view")
         }
         })
         }, {
