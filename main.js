@@ -68,8 +68,6 @@ function init() {
 
 
 //Timeline for elements inside wrap
-    let elements = gsap.utils.toArray(document.querySelectorAll("section > *:not(.one > *)"));
-
     const tl = gsap.timeline()
 
     //Fade in H1 and P of the first section
@@ -109,20 +107,6 @@ function init() {
                 }
             }
         )
-const section = document.querySelectorAll("section");
-
-    //Animate all the children of each child of wrap, except the first one
-    elements.forEach((element) => {
-        gsap.from(element, {
-            scrollTrigger: {
-            trigger: element.parentNode, 
-            start: element.parentNode.offsetLeft,
-            ease: "power1.inOut",
-            scrub:1
-        },
-            opacity: 0
-        });
-    })
 
     //Animate the credit section
     tl.from('.credits', {
@@ -132,9 +116,31 @@ const section = document.querySelectorAll("section");
                 start:'top',
                 scrub: 1
             }
-        })
-        
+        })       
 }
+
+//FADE IN-OUT IMAGES ON SCROLL
+
+let elements = document.querySelectorAll("section > *:not(.one > *)");
+
+//MAKE A THING COME INTO VIEW WHEN SCROLL
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity =  "1";
+            console.log("in view")   
+        } else {
+            entry.target.style.opacity =  "0";
+            console.log("not in view")
+        }
+        })
+        }, {
+        threshold: [0.0, 0.1, 1.0]
+    })
+    
+    elements.forEach( element => {
+        observer.observe(element);
+    })
 
 //LOAD ANIMATIONS 
 window.addEventListener('load', function() {
