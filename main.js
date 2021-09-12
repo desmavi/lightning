@@ -12,11 +12,16 @@ menuToggle.addEventListener("click", function(e) {
         gsap.to(".burger-top", {rotation: 45, transformOrigin: "50% 50%", y: 8, fill: "black" } )
         gsap.to(".burger-bottom", {rotation: -45, transformOrigin: "50% 50%", y: -8, fill: "black"})
         gsap.to(".burger-mid", {width: 0})
+        menuToggle.setAttribute('aria-label', 'chiudi menu');
+
+
     }
     else {
         gsap.to(".burger-top", {rotation: 0, y: 0, fill: "currentColor" } )
         gsap.to(".burger-bottom", {rotation: 0, y: 0, fill: "currentColor" })
         gsap.to(".burger-mid", {width:28 })
+        menuToggle.setAttribute('aria-label', 'menu');
+
     }
 })
 
@@ -128,10 +133,8 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity =  "1";
-            console.log("in view")   
         } else {
             entry.target.style.opacity =  "0";
-            console.log("not in view")
         }
         })
         }, {
