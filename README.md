@@ -11,3 +11,6 @@ Using the library GSAP I also added some animation on scroll.
 - CSS
 - JS
 - GSAP
+
+### Live Website
+[Link to Lightning](https://desmavi.github.io/lightning/)
